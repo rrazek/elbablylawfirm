@@ -11,6 +11,7 @@ class CaseView
             //   $link = "single.php?id=".$Result[$i]->getId();
             //echo $link;
             echo ('
+        <a href="singleCase.php?id=' . $Result[$i]->getId() . '" class="testimonial-link">
         <div class="testimonial-item">
             <i class="fa fa-quote-right"></i>
             <div class="row align-items-center">
@@ -28,6 +29,7 @@ class CaseView
                 </div>
             </div>
         </div>
+        </a>
               ');
 
             //var_dump($Result[$i]);

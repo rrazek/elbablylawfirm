@@ -993,6 +993,41 @@ a:focus {
     padding: 45px 0;
 }
 
+/* Clickable case cards */
+a.testimonial-link {
+    text-decoration: none;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+a.testimonial-link:hover {
+    text-decoration: none;
+}
+
+a.testimonial-link h2 {
+    color: #aa9166;
+}
+
+a.testimonial-link p {
+    color: #999999;
+}
+
+a.testimonial-link:hover h2,
+a.testimonial-link:hover p {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+a.testimonial-link:hover .testimonial-item {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(170, 145, 102, 0.3);
+}
+
+a.testimonial-link .testimonial-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
 .testimonial .testimonials-carousel {
     position: relative;
     width: calc(100% + 30px);
