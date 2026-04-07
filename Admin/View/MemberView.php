@@ -20,17 +20,18 @@ class MemberView
                   <h2>' . $Result[$i]->getName() . '</h2>
                   <p>' . $Result[$i]->getPosition() . '</p>
                   <div class="team-social">
-                    <a class="social-tw" href="'. $Result[$i]->getTwitter() .'"
+                  <!--  <a class="social-tw" href="'. $Result[$i]->getTwitter() .'"
                       ><i class="fab fa-twitter" ></i
                     ></a>
                     <a class="social-fb" href="' . $Result[$i]->getFacebook() . '"
                       ><i class="fab fa-facebook-f"></i
                     ></a>
-                    <a class="social-li" href="' . $Result[$i]->getLinkedIn() . '"
-                      ><i class="fab fa-linkedin-in"></i
-                    ></a>
+                    
                     <a class="social-in" href="' . $Result[$i]->getWhatsapp() . '"
                       ><i class="fab fa-whatsapp"></i
+                    ></a>-->
+                    <a class="social-li" href="' . $Result[$i]->getLinkedIn() . '"
+                      ><i class="fab fa-linkedin-in"></i
                     ></a>
                   </div>
                 </div>

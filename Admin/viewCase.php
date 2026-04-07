@@ -56,7 +56,6 @@
             </div>
             <!-- Single Page End -->
 
-
             <!-- Newsletter Start -->
             <!-- <div class="newsletter">
                 <div class="container">

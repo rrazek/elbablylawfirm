@@ -42,7 +42,7 @@ include_once "Admin/View/ArticleView.php";
 include_once "Admin/Model/Article.php";
 $articleView = new ArticleView();
 $res = $articleView->ShowArticle($_GET["id"]);
-?>
+?> 
                 </div>
             </div>
             <!-- Single Page End -->
