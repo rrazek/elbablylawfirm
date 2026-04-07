@@ -5,7 +5,7 @@
 
         private $HOST="localhost";
         private $USERNAME="root";
-        private $PASSWORD="Sante7_012";
+        private $PASSWORD="root";
         private $DB_NAME="final";
 
 
