@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8" />
+    <title>El-Bably - Law Firm</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="El El-Bably Law Firm" name="keywords" />
+    <meta content="El-Bably Law Firm" name="description" />
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon" />
+
+        <!-- Google Font -->
+        <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@1,600;1,700;1,800&family=Roboto:wght@400;500&display=swap" rel="stylesheet"> 
+        
+        <!-- CSS Libraries -->
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <!-- Top Bar Start -->
+            <?php
+             require_once "header.html";
+            ?>
+            <!-- Nav Bar End -->
+            
+            
+            <!-- Page Header Start -->
+            <!-- <div class="page-header">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2>المكتبة القانونية</h2>
+                        </div>
+                        <div class="col-12">
+                            <a href="">الرئيسية</a>
+                            <a href="">المكتبة القانونية</a>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Page Header End -->
+
+
+            <!-- Service Start -->
+            <div class="service">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>المكتبة القانونية</h2>
+                    </div>
+                    <div class="row">
+                    <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                        <i class="fa fa-clone"></i>
+                        </div>
+                        <h3>  نماذج </h3>
+                 
+                        <a class="btn" href="samples.php">تعرف اكثر</a>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                        <i class="fa fa-gavel"></i>
+                        </div>
+                        <h3>  احكام النقض   </h3>
+              
+                        <a class="btn" href="cassationRulings.php">تعرف اكثر</a>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                        <i class="fa fa-university"></i>
+                        </div>
+                        <h3> دفوع قانونية </h3>
+     
+                        <a class="btn" href="defenseRuling.php">تعرف اكثر</a>
+                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6">
+                    <div class="service-item">
+                        <div class="service-icon">
+                        <i class="fa fa-balance-scale"></i>
+                        </div>
+                        <h3>  القوانين</h3>
+
+                        <a class="btn" href="laws.php">تعرف اكثر</a>
+                    </div>
+                    </div>
+                        <!-- <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa fa-gavel"></i>
+                                </div>
+                                <h3>Criminal Law</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div> -->
+                        <!-- <div class="col-lg-4 col-md-6">
+                            <div class="service-item">
+                                <div class="service-icon">
+                                    <i class="fa fa-globe"></i>
+                                </div>
+                                <h3>Cyber Law</h3>
+                                <p>
+                                    Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non
+                                </p>
+                                <a class="btn" href="">Learn More</a>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Service End -->
+
+            <!-- Footer Start -->
+            <?php
+            require_once "footer.html";
+            ?>
+            <!-- Footer End -->
+            
+            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        </div>
+
+        <!-- JavaScript Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
+    </body>
+</html>
