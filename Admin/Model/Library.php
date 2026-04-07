@@ -149,9 +149,8 @@ class Library implements iLibrary {
         $db = Database::getInstance();
         $conn = $db->getConnection();
         $sql = "select * from library join state on library.status = state.id join law_cat on law_cat.id = library.law_cat where library.id = " . $id;
-        $res = $conn->query($sql);
 
-        $ArticlesDataSet = $conn->query($sql) or die($conn->error());
+        $ArticlesDataSet = $conn->query($sql) or die($conn->error);
         $i = 0;
         $Result = array();
         // echo $sql;
@@ -187,10 +186,10 @@ class Library implements iLibrary {
         } else {}
         // $sql .= " order by date desc ";
         if ($size != -1) {
-            $sql = " limit $size";
+            $sql .= " LIMIT $size";
         }
-        $res = $conn->query($sql);
-        $filesDataSet = $conn->query($sql) or die($conn->error());
+
+        $filesDataSet = $conn->query($sql) or die($conn->error);
 		$i = 0;
         $Result = array();
         while ($row = mysqli_fetch_array($filesDataSet)) {
@@ -220,7 +219,7 @@ class Library implements iLibrary {
         $db = Database::getInstance();
         $conn = $db->getConnection();
         $sql = "UPDATE library SET  Status=? WHERE id=?";
-        echo "as";
+        // echo "as";
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
             mysqli_stmt_bind_param($stmt, "si", $param_status, $param_id);
@@ -285,8 +284,8 @@ class Library implements iLibrary {
         $db = Database::getInstance();
         $conn = $db->getConnection();
         $sql = "select * from law_cat ";
-        $res = $conn->query($sql);
-        $CatsDataSet = $conn->query($sql) or die($conn->error());
+
+        $CatsDataSet = $conn->query($sql) or die($conn->error);
 		$i = 0;
         $Result = array();
         while ($row = mysqli_fetch_array($CatsDataSet)) {

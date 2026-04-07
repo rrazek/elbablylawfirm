@@ -206,9 +206,8 @@ class Article implements iArticle
         $db = Database::getInstance();
         $conn = $db->getConnection();
         $sql = "select * from articles join state on articles.status = state.id where articles.id = " . $id;
-        $res = $conn->query($sql);
 
-        $ArticlesDataSet = $conn->query($sql) or die($conn->mysqli_error());
+        $ArticlesDataSet = $conn->query($sql) or die($conn->error);
         $i = 0;
         $Result = array();
         while ($row = mysqli_fetch_array($ArticlesDataSet)) {
@@ -239,11 +238,10 @@ class Article implements iArticle
         } else {}
         $sql .= " order by date desc ";
         if ($size != -1) {
-            $sql = " limit $size";
+            $sql .= " LIMIT $size";
         }
-        $res = $conn->query($sql);
 
-        $ArticlesDataSet = $conn->query($sql) or die($conn->error());
+        $ArticlesDataSet = $conn->query($sql) or die($conn->error);
         $i = 0;
         $Result = array();
         while ($row = mysqli_fetch_array($ArticlesDataSet)) {

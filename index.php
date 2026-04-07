@@ -547,17 +547,14 @@
           <div class="section-header">
             <h2>أحدث المقالات</h2>
           <div class="owl-carousel blog-carousel">
-          </div>
             <?php
 
               require_once("Admin/View/ArticleView.php");
               require_once("Admin/Model/Article.php");
               $articleView = new ArticleView();
               $res = $articleView->Show_AllArticles_Slider(1, -1);
-              // var_dump($res);
-              // echo"hh";
             ?>
-            
+          </div>
           </div>
         </div>
       </div>

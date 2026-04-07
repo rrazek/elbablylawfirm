@@ -156,7 +156,7 @@ class Message implements iMessage
         $flag = true;
         $db = Database::getInstance();
         $conn = $db->getConnection();
-        var_dump($message);
+        // var_dump($message);
         $sql = "INSERT INTO messages (Name, phone ,email, type,message) VALUES (?,?,?,?,?)";
         if ($stmt = mysqli_prepare($conn, $sql)) {
             // Bind variables to the prepared statement as parameters
@@ -199,9 +199,9 @@ class Message implements iMessage
         $db = Database::getInstance();
         $conn = $db->getConnection();
         $sql = "select * from messages where id = " . $id;
-        $res = $conn->query($sql);
         $i = 0;
-        $MessagesDataSet = $conn->query($sql) or die($conn->error());
+        $Result = array();
+        $MessagesDataSet = $conn->query($sql) or die($conn->error);
         while ($row = mysqli_fetch_array($MessagesDataSet)) {
             $message = new Message();
             $message->setId($row["id"]);
@@ -231,10 +231,10 @@ class Message implements iMessage
         }
         $sql .= " order by seen asc , date desc";
         if ($size != -1) {
-            $sql = " limit $size";
+            $sql .= " LIMIT $size";
         }
-        $res = $conn->query($sql);
-        $MembersDataSet = $conn->query($sql) or die($conn->error());
+
+        $MembersDataSet = $conn->query($sql) or die($conn->error);
         $i = 0;
         $Result = array();
         while ($row = mysqli_fetch_array($MembersDataSet)) {

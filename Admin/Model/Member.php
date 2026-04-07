@@ -226,11 +226,10 @@ class Member implements iMember {
 	 * @return mixed
 	 */
 	function updateMember($id, $member) {
-		echo "hello";
-        $flag=true;
+	        $flag=true;
         $db = Database::getInstance();
         $conn = $db->getConnection();
-        var_dump ($member);
+        // var_dump ($member);
         $sql = "UPDATE members SET Name=?,Bio=?, Position=?, Twitter=? ,Facebook=?,LinkedIn=?,Whatsapp=? ,Image=? WHERE id=?";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
@@ -316,9 +315,8 @@ class Member implements iMember {
         $db = Database::getInstance();
         $conn = $db->getConnection();
         $sql = "select * from members join state on members.status = state.id where members.id = " . $id;
-        $res = $conn->query($sql);
 
-        $ArticlesDataSet = $conn->query($sql) or die($conn->error());
+        $ArticlesDataSet = $conn->query($sql) or die($conn->error);
         $i = 0;
         $Result = array();
         while ($row = mysqli_fetch_array($ArticlesDataSet)) {
@@ -357,10 +355,10 @@ class Member implements iMember {
         } else {}
         // $sql .= " order by date desc ";
         if ($size != -1) {
-            $sql = " limit $size";
+            $sql .= " LIMIT $size";
         }
-        $res = $conn->query($sql);
-        $MembersDataSet = $conn->query($sql) or die($conn->error());
+
+        $MembersDataSet = $conn->query($sql) or die($conn->error);
 		$i = 0;
         $Result = array();
         while ($row = mysqli_fetch_array($MembersDataSet)) {

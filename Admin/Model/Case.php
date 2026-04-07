@@ -161,7 +161,7 @@ class CaseClass implements iCase {
         $flag=true;
         $db = Database::getInstance();
         $conn = $db->getConnection();
-        var_dump ($case);
+        // var_dump ($case);
         $sql = "UPDATE cases SET Name=?,Cat=?, Description=? ,Image=? , Date = ? WHERE id=?";
 
         if ($stmt = mysqli_prepare($conn, $sql)) {
@@ -244,9 +244,8 @@ class CaseClass implements iCase {
         $db = Database::getInstance();
         $conn = $db->getConnection();
         $sql = "select * from cases join state on cases.status = state.id join Case_Category on Case_Category.id = cases.cat where cases.id = " . $id;
-        $res = $conn->query($sql);
 
-        $ArticlesDataSet = $conn->query($sql) or die($conn->error());
+        $ArticlesDataSet = $conn->query($sql) or die($conn->error);
         $i = 0;
         $Result = array();
         while ($row = mysqli_fetch_array($ArticlesDataSet)) {
@@ -282,10 +281,10 @@ class CaseClass implements iCase {
         } else {}
         $sql .= " order by date desc ";
         if ($size != -1) {
-            $sql = " limit $size";
+            $sql .= " LIMIT $size";
         }
-        $res = $conn->query($sql);
-        $MembersDataSet = $conn->query($sql) or die($conn->error());
+
+        $MembersDataSet = $conn->query($sql) or die($conn->error);
 		$i = 0;
         $Result = array();
         while ($row = mysqli_fetch_array($MembersDataSet)) {
@@ -445,8 +444,8 @@ class CaseClass implements iCase {
         $conn = $db->getConnection();
         $sql = "select * from Case_Category ";
         
-        $res = $conn->query($sql);
-        $MembersDataSet = $conn->query($sql) or die($conn->error());
+
+        $MembersDataSet = $conn->query($sql) or die($conn->error);
 		$i = 0;
         $Result = array();
         while ($row = mysqli_fetch_array($MembersDataSet)) {

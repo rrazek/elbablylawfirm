@@ -111,7 +111,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Check input errors before inserting in database
         if (empty($title_err) && empty($cat_err) && empty($desc_err) && empty($date_err)) {
             // Check if $uploadOk is set to 0 by an error
-            if ($default_file = true) {
+            if ($default_file == true) {
                 echo "default fileName".$file_name;
                 $case->setImage("uploads/cases/" . $file_name);
             } else {
